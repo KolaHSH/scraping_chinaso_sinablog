@@ -159,7 +159,7 @@ def save_user_actions(iter):
                 sql = 'REPLACE INTO news_rec_actions(user_id,item_id,action_time) VALUES ("{0}",{1},"{2}")' \
                     .format(user_id, item_id, action_time)
                 db_utils.execute_mysql_sql(conn, sql)
-            execept Exception, e:
+            execept Exception, e:  #the version problem
                 logger.error()
                 continue
     finally:
